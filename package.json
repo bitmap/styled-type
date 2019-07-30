@@ -1,6 +1,6 @@
 {
   "name": "styled-type",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Responsive type system for styled-components",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -22,6 +22,7 @@
   "homepage": "https://github.com/bitmap/styled-type#readme",
   "peerDependencies": {
     "react": "^16.8.0",
+    "react-dom": "^16.8.0",
     "styled-components": "^4.0.0"
   },
   "dependencies": {
@@ -29,6 +30,7 @@
   },
   "devDependencies": {
     "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.5",
     "@types/styled-components": "^4.1.18",
     "@types/styled-system": "^5.0.0",
     "csstype": "^2.6.6"

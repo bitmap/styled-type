@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, ReactNode } from "react"
 import styled, { ThemeContext } from "styled-components"
 import {
   compose,
@@ -25,8 +25,9 @@ const StyledType = styled("p")(
 )
 
 interface Props {
-  typeStyle: string
-  readonly theme: Theme & {
+  children: ReactNode
+  typeStyle?: string
+  readonly theme?: Theme & {
     typeStyles: {
       [key: string]: CSS.StandardProperties
     }
@@ -35,5 +36,5 @@ interface Props {
 
 export const Text = ({ typeStyle = "body", ...props }: Props) => {
   const theme = useContext(ThemeContext)
-  return <StyledType {...theme.typeStyles[typeStyle]} {...props} />
+  return <StyledType {...theme.typeStyles[typeStyle]} {...props}>{props.children}</StyledType>
 }
