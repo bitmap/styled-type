@@ -1,4 +1,4 @@
-import React, { useContext, ReactNode } from "react";
+import React, { Props, HTMLProps, useContext, forwardRef } from "react";
 import styled, { ThemeContext } from "styled-components";
 import {
   color,
@@ -12,21 +12,20 @@ import {
   SpaceProps,
   textStyle,
   TextStyleProps,
-  Theme,
   typography,
-  TypographyProps,
+  TypographyProps
 } from "styled-system";
 
-type TypeStylesProps = SpaceProps & LayoutProps & TypographyProps & ColorProps;
+type StyledTypeProps = Props<Element> &
+  ColorProps &
+  ColorStyleProps &
+  LayoutProps &
+  SpaceProps &
+  TextStyleProps &
+  TypographyProps;
 
-interface Props extends ColorStyleProps, TextStyleProps, TypeStylesProps {
-  children: ReactNode;
+interface TextProps extends StyledTypeProps {
   typeStyle?: string;
-  readonly theme?: Theme & {
-    typeStyles: {
-      [key: string]: TypeStylesProps;
-    };
-  };
 }
 
 const StyledType = styled("p")(
@@ -40,11 +39,13 @@ const StyledType = styled("p")(
   )
 );
 
-export const Text = ({ typeStyle = "body", ...props }: Props) => {
-  const theme = useContext(ThemeContext);
-  return (
-    <StyledType {...theme.typeStyles[typeStyle]} {...props}>
-      {props.children}
-    </StyledType>
-  );
-};
+export const Text = forwardRef<Element, TextProps & HTMLProps<Element>>(
+  ({ typeStyle = "body", ...props }, ref) => {
+    const theme = useContext(ThemeContext);
+    return (
+      <StyledType {...props} ref={ref} {...theme.typeStyles[typeStyle]}>
+        {props.children}
+      </StyledType>
+    );
+  }
+);
