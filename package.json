@@ -1,0 +1,36 @@
+{
+  "name": "styled-type",
+  "version": "0.1.0",
+  "description": "Responsive type system for styled-components",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://github.com/bitmap/styled-type",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "prepublishOnly": "rm -rf dist && npm ci && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Cabe Branson",
+    "url": "https://cabe.dev"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bitmap/styled-type/issues"
+  },
+  "homepage": "https://github.com/bitmap/styled-type#readme",
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "styled-components": "^4.0.0"
+  },
+  "dependencies": {
+    "styled-system": "^5.0.16"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.23",
+    "@types/styled-components": "^4.1.18",
+    "@types/styled-system": "^5.0.0",
+    "csstype": "^2.6.6"
+  }
+}
