@@ -1,7 +1,8 @@
 src
+test
 node_modules
 *.log
 .DS_Store
-.eslintrc
-.eslintignore
+.eslint*
 tsconfig.json
+*.config.js
