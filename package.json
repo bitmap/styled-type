@@ -21,6 +21,15 @@
     "url": "https://github.com/bitmap/styled-type/issues"
   },
   "homepage": "https://github.com/bitmap/styled-type#readme",
+  "keywords": [
+    "react",
+    "styled",
+    "styled-components",
+    "styled-system",
+    "typography",
+    "responsive",
+    "responsive-typography"
+  ],
   "peerDependencies": {
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
