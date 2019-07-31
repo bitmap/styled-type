@@ -1,6 +1,6 @@
 {
   "name": "styled-type",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Responsive type system for styled-components",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
