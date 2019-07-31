@@ -10,7 +10,7 @@
     "prepare": "npm run build",
     "prepublishOnly": "rm -rf dist && npm ci && npm run build",
     "lint": "eslint src/**/*",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest src"
   },
   "author": {
     "name": "Cabe Branson",
@@ -24,22 +24,32 @@
   "peerDependencies": {
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
-    "styled-components": "^4.0.0"
+    "styled-components": "^4.3.0"
   },
   "dependencies": {
     "styled-system": "^5.0.16"
   },
   "devDependencies": {
     "@cabe/eslint-config": "^0.1.0",
+    "@types/enzyme": "^3.10.3",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/jest": "^24.0.16",
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.5",
     "@types/styled-components": "^4.1.18",
     "@types/styled-system": "^5.0.0",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
-    "csstype": "^2.6.6",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.3.5",
     "eslint": "^6.1.0",
     "eslint-plugin-react": "^7.14.3",
+    "jest": "^24.8.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.3.2",
+    "ts-jest": "^24.0.2",
     "typescript": "^3.5.3"
   }
 }

@@ -25,7 +25,7 @@ type StyledTypeProps =
   TextStyleProps &
   TypographyProps;
 
-interface TextProps extends StyledTypeProps {
+export interface TextProps extends StyledTypeProps {
   typeStyle?: string;
 }
 
