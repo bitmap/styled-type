@@ -23,10 +23,10 @@ type StyledTypeProps =
   LayoutProps &
   SpaceProps &
   TextStyleProps &
-  TypographyProps;
+  TypographyProps
 
 export interface TextProps extends StyledTypeProps {
-  typeStyle?: string;
+  typeStyle?: string
 }
 
 const StyledType = styled('p')(

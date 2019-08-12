@@ -6,10 +6,9 @@
   },
   "extends": [
     "@cabe",
+    "@cabe/typescript",
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended"
   ],
-  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module",
@@ -26,13 +25,6 @@
     }
   },
   "rules": {
-    "@typescript-eslint/indent": ["error", 2, {
-      "ObjectExpression": "first"
-    }],
-    "@typescript-eslint/explicit-function-return-type": ["error", {
-      "allowExpressions": true,
-      "allowTypedFunctionExpressions": true
-    }],
     "react/display-name": 0,
     "react/prop-types": 0,
   }
